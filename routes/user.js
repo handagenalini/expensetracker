@@ -7,6 +7,8 @@ const authenticatemiddleware = require('../middleware/auth');
 
 const router = express.Router();
 
+router.get('/', userController.getsignup);
+router.get('/login', userController.getlogin);
 
 router.post('/signup', userController.signup);
 

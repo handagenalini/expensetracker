@@ -67,6 +67,14 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
+const getsignup=(req,res,next)=>{
+    
+        res.render('/signup', {
+          pageTitle: 'signup',
+          path: '/signup',
+          editing: false
+        });
+}
 
  const signup = (req, res)=>{
     const { name, email, password } = req.body;
@@ -90,6 +98,13 @@ const User = require('../models/user');
 
 function generateAccessToken(id) {
     return jwt.sign(id ,process.env.TOKEN_SECRET);
+}
+const getlogin=(req,res,next)=>{
+    res.render('/login', {
+        pageTitle: 'login',
+        path: '/login',
+        editing: false
+      });
 }
 
 const login = (req, res) => {
@@ -121,5 +136,7 @@ const login = (req, res) => {
 module.exports = {
     signup,
     login,
+    getsignup,
+    getlogin,
 
 }
