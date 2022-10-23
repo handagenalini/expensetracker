@@ -1,5 +1,9 @@
 const Expense = require('../models/expense');
 
+
+const { BlobServiceClient } = require('@azure/storage-blob');
+const { v1: uuidv1} = require('uuid');
+
 const addexpense = (req, res) => {
     console.log('in addexpense',req.body)
     const { expenseamount, description, category } = req.body;
@@ -46,7 +50,7 @@ const downloadExpenses =  async (req, res) => {
         // V.V.V.Imp - Guys Create a unique name for the container
         // Name them your "mailidexpensetracker" as there are other people also using the same storage
 
-        const containerName = 'prasadyash549yahooexpensetracker'; //this needs to be unique name
+        const containerName = 'handagenaliniexpensetracker'; //this needs to be unique name
 
         console.log('\nCreating container...');
         console.log('\t', containerName);
@@ -56,12 +60,13 @@ const downloadExpenses =  async (req, res) => {
 
         //check whether the container already exists or not
         if(!containerClient.exists()){
+            console.log('-------------------------------------------------------')
             // Create the container if the container doesnt exist
             const createContainerResponse = await containerClient.create({ access: 'container'});
             console.log("Container was created successfully. requestId: ", createContainerResponse.requestId);
         }
         // Create a unique name for the blob
-        const blobName = 'expenses' + uuidv1() + '.txt';
+        const blobName = 'expense' + uuidv1() + '.txt';
 
         // Get a block blob client
         const blockBlobClient = containerClient.getBlockBlobClient(blobName);

@@ -118,8 +118,8 @@ function addNewExpensetoUI(expense){
     const expenseElemId = `expense-${expense.id}`;
     parentElement.innerHTML += `
         <li id=${expenseElemId}>
-            ${expense.expenseamount} - ${expense.category} - ${expense.description}
-            <button onclick='deleteExpense(event, ${expense.id})'>
+            ${expense.expenseamount}-------${expense.category}-------${expense.description}
+            <button  onclick='deleteExpense(event, ${expense.id})'>
                 Delete Expense
             </button>
         </li>`
@@ -153,7 +153,7 @@ function removeExpensefromUI(expenseid){
 
 function download(){
     console.log('in download frontend')
-axios.get('http://localhost:3000/downloadExpenses', { headers: {"Authorization" : token} })
+axios.get('http://localhost:3000/download', { headers: {"Authorization" : token} })
 .then((response) => {
     if(response.status === 201){
         //the bcakend is essentially sending a download link

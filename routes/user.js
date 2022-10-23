@@ -18,6 +18,8 @@ router.post('/addexpense',authenticatemiddleware.authenticate , expenseControlle
 
 router.get('/getexpenses', authenticatemiddleware.authenticate, expenseController.getexpenses )
 
+
 router.delete('/deleteexpense/:expenseid', authenticatemiddleware.authenticate,expenseController.deleteexpense)
+router.get('/download', authenticatemiddleware.authenticate, expenseController.downloadExpenses)
 
 module.exports = router;

@@ -1,0 +1,106 @@
+*{
+margin: 0;
+padding: 0;
+
+}
+.maincontainer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    
+
+}
+.container{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    height: 200px;
+    width:200px;
+    background-color: brown;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    padding: 0 0 0 20px;
+    border-radius: 5px;
+    
+}
+.header{
+    display: flex;
+    background-color: burlywood;
+    color: brown;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1pc;
+    width: 700px;
+    border-radius: 5px;
+    justify-self: center;
+    align-self: center;
+}
+.header1{
+    display: flex;
+    background-color: rgb(167, 99, 11);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 650px;
+    height: 75px;
+    border-radius: 5px;
+  
+}
+
+.maincontainer1{
+    display: flex;
+    justify-content: center;
+    
+    
+
+}
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color:whitesmoke
+    height: 50px;
+    width:90px;
+    margin: 0px 200px  0px 620px; */
+}
+.user1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+#user{
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+    
+}
+#rzp-button1{
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+    margin: 25px 12px;
+    
+}
+#download{
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+    
+}
+#listOfExpenses{
+    
+    display:flexbox;
+    justify-content: center;
+    align-items: center;
+    background-color: chocolate;
+    color:white;
+    width: 725px;
+    padding: 0 0 0 25px;
+    margin: 0px 0 0 295px;
+    
+}

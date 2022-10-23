@@ -5,17 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="maincontainer1">
+        <div class="header">
+        <h1>Welcome to ExpenseTracker</h1>
+        
+    </div>
+    </div>
+    <div class="maincontainer1">
+    <div class="header1">
+        <h1>TRACK YOUR EXPENSES</h1>
+        
+    </div>
+    </div>
+    <div class="maincontainer">
+        <nav class="container">
+
+   
     <form onsubmit="login(event)">
         <label for="email">Enter your email:</label>
         <input type="email" name="email" required />
         <input type="password" name="password" required />
         <button>Login</button>
     </form>
-    <a href="/signup.html">New User - Signup Now</a>
-    <button onclick="forgotpassword()"> Forgot password</button>
+</nav>
+</div>
+    <a class="user" href="/signup.html">New User - Signup Now</a>
+    <div class="user1">
 
+    
+    <button id="user" onclick="forgotpassword()"> Forgot password</button>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/login.js" ></script>
 </body>

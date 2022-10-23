@@ -5,8 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="maincontainer1">
+        <div class="header">
+        <h1>Welcome to ExpenseTracker</h1>
+        
+    </div>
+    </div>
+    <div class="maincontainer1">
+    <div class="header1">
+        <h1>TRACK YOUR EXPENSES</h1>
+        
+    </div>
+    </div>
+    <div class="maincontainer">
+        <nav class="container">
     <form onsubmit="addNewExpense(event)">
         <label for="expenseamount">Choose expenseamount:</label>
         <input type="number" name="expenseamount" required> </input>
@@ -21,15 +36,18 @@
         </select>
         <button>Add Expense</button>
     </form>
-     <a href="/public/payment.html">premium user</a>
+    </nav>
+    </div>
+     
     <ul id='listOfExpenses'>
 
 
     </ul>
-
+<div class="user">
 <button id="rzp-button1">Buy Premium</button>
 
-<button onclick="download()" id="downloadexpense">Download File</button>
+<button  id="download" onclick="download()" id="downloadexpense">Download File</button>
+</div>
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
 
